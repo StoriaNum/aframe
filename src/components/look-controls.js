@@ -175,13 +175,9 @@ module.exports.Component = registerComponent('look-controls', {
     this.polyfillControls.update();
     hmdEuler.setFromQuaternion(this.polyfillObject.quaternion, 'YXZ');
     // On mobile, do camera rotation with touch events and sensors.
-/*    rotation.x = radToDeg(hmdEuler.x) + radToDeg(pitchObject.rotation.x);
+    rotation.x = radToDeg(hmdEuler.x) + radToDeg(pitchObject.rotation.x);
     rotation.y = radToDeg(hmdEuler.y) + radToDeg(yawObject.rotation.y);
-    rotation.z = 0;             vecchio codice aggiorno per ruotare su cell     */
-    
-    rotation.x =  radToDeg(pitchObject.rotation.x);
-    rotation.y =  radToDeg(yawObject.rotation.y);
-    rotation.z = 0;
+    rotation.z = 0; 
     
     this.el.setAttribute('rotation', rotation);
   },
